@@ -1,0 +1,26 @@
+Как использовать градиенты на тексте:
+	https://fossheim.io/writing/posts/css-text-gradient/
+
+Как сделать текст пустым внутри и рамку вокруг него? Чтобы буквы были обведены и пустыми внутри
+	color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+
+
+
+
+Как делается svg-маска:
+
+1 .Из макета копируется svg-маска
+2. Засовываем ее в html и оборачиваем внутряку <svg></svg> в тег <clipPath></clipPath> и даем ему id. Выглядит так:
+	<svg>
+		<clipPath id="mask">
+			// svg code here
+		</clipPath>
+	</svg>
+
+3. Элементу, которому необходимо задать эту маску добавляем в css параметр clip-path: url('#mask');
+	.element {
+		clip-path: url('#mask');
+		// another your css code
+	}
