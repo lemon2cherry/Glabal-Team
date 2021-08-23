@@ -1,11 +1,12 @@
-$(function() {
+let loginBtn = document.querySelector('.login-menu');
+let topBtns = document.querySelector('.header__top-btns');
+let menuBtn = document.querySelector('.menu__btn');
+let menu = document.querySelector('.menu');
 
-    $('.login-menu').on('click', function() {
-        $('.header__top-btns').toggleClass('header__top-btns--active')
-    })
+loginBtn.onclick = function() {
+    topBtns.classList.toggle('header__top-btns--active');
+};
 
-    $('.menu__btn').on('click', function () {
-        $('.menu').toggleClass('menu--active')
-    });
-    
-})
+menuBtn.onclick = function() {
+    menu.classList.toggle('menu--active');
+};
